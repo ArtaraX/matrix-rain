@@ -14,6 +14,7 @@ class MatrixRain{
             this.activeColorIndex = (this.activeColorIndex + 1) % this.colors.length;
         });
 
+        // seems like it works when i tap on my phone screen 
         // document.addEventListener("touchstart", () => {
         //     this.activeColorIndex = (this.activeColorIndex + 1) % this.colors.length;
         // });
@@ -26,9 +27,9 @@ class MatrixRain{
             this.characters.push(String.fromCharCode(i))
         }
         // Hiragana: U+3040 to U+309F
-        // for (let i = 0x3040; i <= 0x309F; i++) {
-        //     this.characters.push(String.fromCharCode(i));
-        // }
+        for (let i = 0x3040; i <= 0x309F; i++) {
+            this.characters.push(String.fromCharCode(i));
+        }
         this.fontSize = 20
         this.columns = Math.floor(this.canvas.width / this.fontSize) //number of possible columns per screen width
         this.drops = Array(this.columns).fill(0) // initially [0,0,0,0... for each column]
