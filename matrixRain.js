@@ -33,7 +33,8 @@ class MatrixRain{
         this.context.fillStyle = "rgba(0,0,0, 0.05)"
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height)
 
-        this.context.fillStyle = 'crimson'
+
+        this.context.fillStyle = '#87CEEB'
         this.context.font = `${this.fontSize}px monospace`
     
         for (let i = 0; i < this.columns; i++){
