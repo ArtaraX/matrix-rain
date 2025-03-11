@@ -6,7 +6,18 @@ class MatrixRain{
         this.canvas.width = window.innerWidth
         this.canvas.height = window.innerHeight
 
-        //adjust on window resize
+        this.colors = ["#0F0", "#F00", "#00F", "#FFF", "#FFD700"]; // Green, Red, Blue, White, Gold
+        this.activeColorIndex = 0 
+
+        // Listen for mouse clicks and touch events to switch colors
+        document.addEventListener("click", () => {
+            this.activeColorIndex = (this.activeColorIndex + 1) % this.colors.length;
+        });
+
+        // document.addEventListener("touchstart", () => {
+        //     this.activeColorIndex = (this.activeColorIndex + 1) % this.colors.length;
+        // });
+        // //adjust on window resize
         window.addEventListener("resize", () => this.resize())
 
         this.characters = [] 
@@ -34,7 +45,7 @@ class MatrixRain{
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height)
 
 
-        this.context.fillStyle = '#87CEEB'
+        this.context.fillStyle = this.colors[this.activeColorIndex]
         this.context.font = `${this.fontSize}px monospace`
     
         for (let i = 0; i < this.columns; i++){
