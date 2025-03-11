@@ -41,7 +41,7 @@ class MatrixRain{
     }
 
     draw(){
-        this.context.fillStyle = "rgba(0,0,0, 0.05)"
+        this.context.fillStyle = "rgba(0,0,0, 0.07)"
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height)
 
 
