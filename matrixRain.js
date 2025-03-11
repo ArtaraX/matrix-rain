@@ -6,12 +6,14 @@ class MatrixRain{
         this.canvas.width = window.innerWidth
         this.canvas.height = window.innerHeight
 
-        this.colors = ["#0F0", "#F00", "#00F", "#FFF", "#FFD700"]; // Green, Red, Blue, White, Gold
+        this.colors = ["#0F0", "#FF0000", "#00FFFF", "#FFA500", "#9400D3", "#FFD700", "#FFFFFF", "#FF1493"];
         this.activeColorIndex = 0 
+
 
         // Listen for mouse clicks and touch events to switch colors
         document.addEventListener("click", () => {
             this.activeColorIndex = (this.activeColorIndex + 1) % this.colors.length;
+            // this.drops = Array(this.columns).fill(-5)
         });
 
         // seems like it works when i tap on my phone screen 
