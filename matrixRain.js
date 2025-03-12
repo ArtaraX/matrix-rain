@@ -6,8 +6,8 @@ class MatrixRain{
         this.canvas.width = window.innerWidth
         this.canvas.height = window.innerHeight
 
-        this.colors = ["#0F0", "#FF0000", "#00FFFF", "#FFA500", "#9400D3", "#FFD700", "#FFFFFF", "#FF1493"];
-        this.activeColorIndex = 0 
+        this.colors = ["#0F0", "#87CEEB", "#FF0000", "#00FFFF", "#FFA500", "#9400D3", "#FFD700", "#FFFFFF", "#FF1493"];
+        this.activeColorIndex = 0
 
 
         // Listen for mouse clicks and touch events to switch colors
@@ -44,7 +44,7 @@ class MatrixRain{
     }
 
     draw(){
-        this.context.fillStyle = "rgba(0,0,0, 0.07)"
+        this.context.fillStyle = "rgba(0,0,0, 0.06)"
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height)
 
 
@@ -53,6 +53,7 @@ class MatrixRain{
     
         for (let i = 0; i < this.columns; i++){
             const char = this.characters[Math.floor(Math.random() * this.characters.length)]
+
 
             this.context.fillText(char, i * this.fontSize, this.drops[i] * this.fontSize)
 
