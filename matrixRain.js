@@ -54,7 +54,12 @@ class MatrixRain{
         for (let i = 0; i < this.columns; i++){
             const char = this.characters[Math.floor(Math.random() * this.characters.length)]
 
+            
+            this.context.fillStyle = this.colors[this.activeColorIndex]
 
+            if (Math.random() > 0.98){
+                this.context.fillStyle = 'white'
+            }
             this.context.fillText(char, i * this.fontSize, this.drops[i] * this.fontSize)
 
             if (this.drops[i] * this.fontSize > this.canvas.height && Math.random() > 0.95){
